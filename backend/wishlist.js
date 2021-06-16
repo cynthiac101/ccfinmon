@@ -1,13 +1,15 @@
-// This file will deal with the customer table.
+// This file will deal with the wishlist table.
 const database = require("./database");
 const express = require("express");
+const { response } = require("express");
 
 var router = express.Router();
 
 /*
 router.get("/customer/all", get_all_customers);
-router.put("/customer/wallet", update_wallet_by_id);
 */
+
+router.put("/wishlist/update", update_wishlist_by_id);
 router.get("/wishlist/by-cid", get_wishlist_by_child_id);
 router.post("/wishlist/create", add_new_wishlist);
 router.delete("/wishlist/delete", delete_wishlist_by_id);
@@ -26,10 +28,16 @@ function get_all_customers(request, response) {
     }
   );
 }
-
-function update_wallet_by_id(request, response) {
+*/
+function update_wishlist_by_id(request, response) {
   database.connection.query(
-    `update customers SET wallet = '${request.body.wallet}' where id = ${request.query.id}`,
+    `update wishlist 
+    SET type = '${request.body.type}',
+    category = '${request.body.category}',
+    item_name = '${request.body.item_name}',
+    price = '${request.body.price}', 
+    goal = '${request.body.goal}'
+    where id = ${request.query.id}`, 
     (error, results) => {
       if (error) {
         console.log(error);
@@ -40,7 +48,6 @@ function update_wallet_by_id(request, response) {
     }
   );
 }
-*/
 
 function get_wishlist_by_child_id(request, response) {
     database.connection.query(

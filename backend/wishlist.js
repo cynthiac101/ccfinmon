@@ -51,7 +51,7 @@ function update_wishlist_by_id(request, response) {
 
 function get_wishlist_by_child_id(request, response) {
     database.connection.query(
-      `select * from wishlist where child_id = ${request.body.child_id}`,
+      `select * from wishlist where child_id = ${request.query.child_id}`,
       (error, results) => {
         if (error) {
           console.log(error);

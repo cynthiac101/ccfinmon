@@ -1,6 +1,14 @@
 # ccfinmon
 for my own practice
 
+version 0.05
+Backend
+- correct get_wishlist_by_child_id code
+- test on Postman
+Frontend
+- create index.html
+- create wishlist.js
+
 version 0.04
 Backend
 - code CRUD functions for wishlist.js

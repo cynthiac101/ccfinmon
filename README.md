@@ -36,10 +36,11 @@ Instructions to connect front end to back end
 1. fork or clone github repository
 2. Open VSC -> go to file -> open folder -> locate the folder that contains the 2 folders (i.e. backend and frontend) on your local computer 
 3. Right click on backend folder and open in integrated terminal 
-4. type npm install
-5. type node index
-6. Right click on frontend folder and open in integrated terminal 
-7. type npm install
-8. type npm start
-9. a new tab will be launched on your browser window
-10. use any username and password combination to login
+4. type npm init to install package.json file and for entry point, type <index.js> as "main file"
+5. type npm install to install package-lock.js 
+6. type node index
+7. Right click on frontend folder and open in integrated terminal 
+8. type npm install
+9. type npm start
+10. a new tab will be launched on your browser window
+11. use any username and password combination to login
